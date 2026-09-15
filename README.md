@@ -10,9 +10,9 @@ A small Express server that proxies requests to the OpenWeatherMap API, keeping 
 
 The frontend originally called OpenWeatherMap directly, which exposed the API key in the browser's source code. This server sits between the frontend and OpenWeatherMap:
 
-```
+
 Frontend  →  This Backend  →  OpenWeatherMap API
-```
+
 
 The API key is stored as a server-side environment variable and never reaches the browser.
 
@@ -25,11 +25,11 @@ The API key is stored as a server-side environment variable and never reaches th
 | GET | `/forecast` | `city` | 5-day / 3-hour forecast for a city |
 
 Example:
-```
+
 GET /weather?city=Nairobi
 GET /weather/coords?lat=-1.28&lon=36.82
 GET /forecast?city=Nairobi
-```
+
 
 ## Tech Stack
 
@@ -43,9 +43,9 @@ GET /forecast?city=Nairobi
 1. Clone this repository
 2. Run `npm install`
 3. Create a `.env` file in the root with:
-   ```
+   
    WEATHER_API_KEY=your_openweathermap_api_key
-   ```
+   
 4. Run `node server.js`
 5. Server runs on `http://localhost:3000`
 
